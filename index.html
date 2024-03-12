@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShirTodolist (practice)</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">ShirTodolist</h1>
+        </div>
+        <div class="input-container">
+            <div>
+                <input type="text" id="todo-input">
+                <button id="add-todo">+</button>
+                <select>
+                    <option value="all">all</option>
+                    <option value="completed">completed</option>
+                    <option value="incompleted">incompleted</option>
+                </select>
+            </div>
+        </div>
+        <div class="todos-container">
+            <div class="todo">
+                <div class="todo-title">
+                    <p>test text</p>
+                </div>
+                <button class="completed">completed</button>
+                <button class="remove">remove</button>
+            </div>
+        </div>
+    </div>
+</body>
+    <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.2.1/redux.js"></script>
+    <script type="module" src="js/app.js"></script>
+</html>

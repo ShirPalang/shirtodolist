@@ -1,0 +1,105 @@
+@mixin border-none()
+    border: none
+    outline: none
+
+*
+    box-sizing: border-box
+    font-family: Arial, Helvetica, sans-serif
+
+body
+    display: flex
+    justify-content: center
+    padding-top: 90px
+    background-color: #37305e
+
+.container
+    width: 700px
+    display: flex
+    flex-direction: column
+    align-items: center
+    .header
+        h1
+            color: #fff
+            font-size: 50px
+    .input-container
+        width: 100%
+        div
+            display: flex
+            justify-content: space-between
+            height: 40px
+            input
+                width: 75%
+                @include border-none()
+                font-size: 25px
+                border-radius: 50px
+                padding: 0 30px
+                transition: 0.3s
+            input:focus
+                box-shadow: 0 0 1px 6px #897dc9
+            button
+                display: flex
+                justify-content: center
+                align-items: center
+                padding: 0 16px
+                border-radius: 50px
+                @include border-none()
+                transition: 0.3s
+                background-color: white
+            button:hover
+                box-shadow: 0 0 1px 6px #897dc9
+            select
+                @include border-none()
+                border-radius: 50px
+                padding: 0 10px
+                transition: 0.3s
+            select:focus
+                box-shadow: 0 0 1px 6px #897dc9
+    .todos-container
+        margin-top: 50px
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 30px 0
+        .todo
+            display: flex
+            width: 80%
+            height: 40px
+            justify-content: space-between
+            align-items: center
+            .todo-title
+                background-color: #fff
+                width: 67%
+                height: 100%
+                align-items: center
+                justify-content: center
+                display: flex
+                border-radius: 50px
+                p
+                    font-size: 20px
+            button
+                display: flex
+                justify-content: center
+                align-items: center
+                height: 100%
+                padding: 0 10px
+                font-size: 15px
+                border-radius: 50px
+                @include border-none()
+                transition: 0.3s
+                background-color: white
+                font-weight: bold
+            .remove
+                background-color: #ff0000
+                color: #fff
+            .remove:hover
+                box-shadow: 0 0 1px 6px #c97d87
+                color: red
+                background-color: #fff8f8
+            .completed
+                background-color: #0b660b
+                color: #fff
+            .completed:hover
+                box-shadow: 0 0 1px 6px #7dc981
+                color: green
+                background-color: #fff8f8
